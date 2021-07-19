@@ -48,7 +48,7 @@
 - [鱼叉助手开发教程](https://space.bilibili.com/72510501)
 
 # Lua 教学项目组
-哔哩哔哩(B站) | Youtube(油管) | 网易云课堂 | Lua讲师 | [码云目录]()
+哔哩哔哩(B站) | Youtube(油管) | 网易云课堂 | Lua讲师 | [码云目录](https://gitee.com/lua_development/yxzhushou/blob/master/renyu.md)
 
 [//]: contributor-faces
 
@@ -57,7 +57,7 @@
 [//]: contributor-faces
 
 # iOS App项目组
-底层架构师 | 开发工程师 | 管理员 | [码云更新日志]()
+底层架构师 | 开发工程师 | 管理员 | [码云更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/ioslog.md)
 
 [//]: contributor-faces
 
@@ -89,7 +89,7 @@ iOS免越狱物联网 | 内测小组
 [//]: contributor-faces
 
 # Android App项目组
-底层架构师 | 开发工程师 | 管理员 | [码云更新日志]()
+底层架构师 | 开发工程师 | 管理员 | [码云更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/Androidlog.md)
 
 [//]: contributor-faces
 
@@ -121,7 +121,7 @@ Android Root/免Root | 内测小组
 [//]: contributor-faces
 
 # linux服务器 web项目组
-底层架构师 | 开发工程师 | 管理员 | [码云更新日志]()
+底层架构师 | 开发工程师 | 管理员 | [码云更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/linuxlog.md)
 
 [//]: contributor-faces
 
@@ -131,7 +131,7 @@ Android Root/免Root | 内测小组
 [//]: contributor-faces
 
 # VScode 插件项目组
-底层架构师 | 开发工程师 | 管理员 | [码云更新日志]()
+底层架构师 | 开发工程师 | 管理员 | [码云更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/CHANGELOG.md)
 
 [//]: contributor-faces
 
