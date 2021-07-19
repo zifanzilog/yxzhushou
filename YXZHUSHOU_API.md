@@ -19,6 +19,11 @@
 * [keepScreen](#keepScreen) 保持屏幕
 * ~~[binarizeImage](#binarizeImage) 二值化图片转换为table~~
 
+**功能函数**
+* [http](#http) HTTPget/HTTPpost 网络请求
+* [base64encode](#base64encode) base64编码
+* [base64decode](#base64decode) base64解码
+
 **其他函数**
 * [mSleep](#mSleep) 延时
 * [sysLog](#sysLog) 系统日志
@@ -34,7 +39,7 @@
 * [getScreenDirection](#getScreenDirection) 获取屏幕方向
 * ~~[setScreenScale](#setScreenScale) 设置屏幕等比例自动缩放~~
 * ~~[setScreenAllScale](#setScreenAllScale) 设置屏幕全分辨率自动缩放~~
-* [mTime](#mTime) 获取本地时间戳
+* [mTime](#mTime) 获取本地时间戳（毫秒）
 * ~~[getNetTime](#getNetTime) 获取网络时间~~
 * [getOSType](#getOSType) 获取系统类型
 * [isPriviateMode](#isPriviateMode) 获取系统环境类型

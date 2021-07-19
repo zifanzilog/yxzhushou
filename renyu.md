@@ -1,2 +1,11 @@
 # 人鱼情未了VIP课程
-目录
+[免费教程](https://space.bilibili.com/72510501) 
+
+原价：588 | 优惠价：388 | [Lua 脚本入门目录](https://docs.qq.com/mind/DVnBnS2xMdXZGa0N5)
+
+原价：2500 | 优惠价：1388 | [Lua 脚本入门目录](https://docs.qq.com/mind/DVnBnS2xMdXZGa0N5) | [Lua 识字算法目录](https://docs.qq.com/mind/DVmRQZFFISUV2dXZp) | [Java App开发目录](https://docs.qq.com/mind/DVmRQZFFISUV2dXZp)
+
+购买任意即可升级VIP学员：
++ 享受永久免费更新所属系列教程(2018年更新至今)。
++ 加入VIP学员群，享受更多前沿技术分享和业内同行交流，群文件提供资料学习。
++ 购买进阶课只补差价。
