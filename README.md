@@ -24,8 +24,8 @@
 
 如有问题可以先参阅 [码云文档](https://gitee.com/lua_development/yxzhushou/blob/master/鱼叉助手API文档.md)， 或使用 [码云issues](https://gitee.com/lua_development/yxzhushou/issues) 留言，我们会关注和回复。
 
-- 鱼叉助手开发交流 QQ群：715467974（付费学习私聊群主）
-- 项目组 合作联系QQ：2787283623 (人鱼情未了)
+- 鱼叉助手开发交流 [QQ群](https://qm.qq.com/cgi-bin/qm/qr?k=rQob0dn2oFrLPLuqmXKuUi76oFa-HWkM&jump_from=webapi)：715467974
+- 项目组合作联系 [QQ客服](http://sighttp.qq.com/authd?IDKEY=b57a92f4779302b4283e6497ba8b723e769fac125c5e55c4)：2787283623
 
 # 项目组
 
