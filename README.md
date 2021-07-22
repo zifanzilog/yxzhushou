@@ -25,16 +25,18 @@
 如有问题可以先参阅 [码云文档](https://gitee.com/lua_development/yxzhushou/blob/master/鱼叉助手API文档.md)， 或使用 [码云issues](https://gitee.com/lua_development/yxzhushou/issues) 留言，我们会关注和回复。
 
 - 鱼叉助手开发交流 QQ群：715467974（付费学习私聊群主）
-- 项目组合作联系 QQ：2787283623 (人鱼情未了)
+- 项目组 合作联系QQ：2787283623 (人鱼情未了)
 
-# Lua 教学项目组
+# 项目组
+
+## Lua 教学项目组
 
 讲师入驻条件：
 * 掌握 Lua 语言
 * 熟悉 鱼叉助手 开发流程
 * 熟悉 剪辑 软件
 
-成员：
+简介：
 
 哔哩哔哩(B站) | Youtube(油管) | 网易云课堂 | 抖音 | [付费课程](https://gitee.com/lua_development/yxzhushou/blob/master/付费课程目录.md) | [免费课程](https://space.bilibili.com/72510501)
 
@@ -44,7 +46,7 @@
 
 [//]: contributor-faces
 
-# iOS App项目组
+## iOS App项目组
 
 App 开发入驻条件：
 * 掌握 Objective-C 、Lua 、 C/C++ 语言开发
@@ -52,7 +54,7 @@ App 开发入驻条件：
 * 掌握 Objective-C 与 C/C++ 交互开发
 * 拥有 iOS 开发者账号
 
-成员：
+简介：
 
 底层架构师 | 开发工程师 | 管理员 | [App 更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/更新日志/iOS更新日志.md)
 
@@ -85,12 +87,14 @@ iOS 免越狱物联网 | Lua 内测小组
 
 [//]: contributor-faces
 
-# Android App项目组
+## Android App项目组
 
 App 开发入驻条件：
 * 掌握 Java 、 Lua 、 C/C++ 语言开发
 * 掌握 Java 与 Lua 交互开发 
 * 掌握 Java 与 C/C++ 交互开发
+
+简介：
 
 底层架构师 | 开发工程师 | 管理员 | [Java 开发教程](https://docs.qq.com/mind/DVmRQZFFISUV2dXZp)
  | [App 更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/更新日志/Android更新日志.md)
@@ -124,7 +128,7 @@ Android Root/免Root | Lua 内测小组
 
 [//]: contributor-faces
 
-# linux服务器 web项目组
+## linux服务器 web项目组
 底层架构师 | 开发工程师 | 管理员 | [更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/更新日志/Linux更新日志.md)
 
 [//]: contributor-faces
@@ -134,7 +138,7 @@ Android Root/免Root | Lua 内测小组
 
 [//]: contributor-faces
 
-# VScode 插件项目组
+## VScode 插件项目组
 
 入驻条件：
 * 掌握 TypeScript 、JavaScript 、C/C++ 语言开发
@@ -152,7 +156,7 @@ Android Root/免Root | Lua 内测小组
 
 [//]: contributor-faces
 
-# ESP8266/ESP32 物联网项目组
+## ESP8266/ESP32 物联网项目组
 
 入驻条件：
 * 掌握 Lua 语言开发
@@ -170,7 +174,7 @@ Android Root/免Root | Lua 内测小组
 
 [//]: contributor-faces
 
-# 图像识别 算法项目组
+## 图像识别 算法项目组
 
 入驻条件：
 * 掌握 Lua 、C/C++ 、Java 语言开发
