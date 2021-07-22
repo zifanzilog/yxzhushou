@@ -3,36 +3,17 @@
 + **鱼叉脚本** 使用 **Lua** 语言进行编写,支持 **Lua** 的所有语法与基本函数，配合 **鱼叉脚本** 特有的函数命令，实现找图、找色、触摸等高级功能。
 + 编写脚本前请先学习 **Lua** [基本语法教程](https://www.bilibili.com/video/BV1rt411f7GY) | **Lua** [脚本入门教程](https://www.bilibili.com/video/BV1SW411C7u3)
 
-# 功能
-
-- Lua API 快捷文档：[码云文档](https://gitee.com/lua_development/yxzhushou/blob/master/YXZHUSHOU_API.md)
-- Lua 中文编程支持（ 变量名 | 静态诊断 | 代码格式化 | 代码高亮 ）
-- Lua 代码补全
-- Lua 代码片段
-- Lua 定义跳转
-- Lua 生成注释
-- Lua 类型推断
-- Lua 代码格式化：开源 [lua-fmt](https://github.com/trixnz/lua-fmt)
-- Lua 代码诊断：开源 [luacheck](https://github.com/mpeterv/luacheck)
-- Lua 调试器：开源 [Luapanda](https://github.com/Tencent/LuaPanda)
-- iOS/Android/模拟器 设备截图
-- iOS/Android/模拟器 设备远程调试
-- 抓图工具 图片取色器
-- 抓图工具 代码一键生成
-- 抓图工具 图片放大镜
-- 抓图工具 图片二值化
-
 # 文档
 
 引擎版本：1.0.0
 
-鱼叉助手API [码云文档](https://gitee.com/lua_development/yxzhushou/blob/master/YXZHUSHOU_API.md) 
+鱼叉助手API [码云文档](https://gitee.com/lua_development/yxzhushou/blob/master/鱼叉助手API文档.md) 
 
 # 参与贡献
 
 我们非常期待您的贡献，无论是完善文档，提出、修复 Bug 或是增加新特性。
 如果您在使用过程中发现文档不够完善，欢迎记录下来并提交。
-如果发现 bug，请通过 [码云issues](https://gitee.com/lua_development/yxzhushou/issues) 来提交并描述相关的问题，您也可以在这里查看其它的 issue，通过解决这些 issue 来贡献代码。
+如果发现 bug，请通过 [码云issues](https://gitee.com/lua_development/yxzhushou/issues) 留言来提交并描述相关的问题，您也可以在这里查看其它开发人员的 issues，通过解决这些 issues 来贡献代码。
 
 鱼叉助手 [码云仓库](https://gitee.com/lua_development/yxzhushou) 鼓励开发者的参与和贡献，期待你的加入。
 
@@ -41,14 +22,21 @@
 
 # 技术支持
 
-如有问题可以先参阅 [码云文档](https://gitee.com/lua_development/yxzhushou/blob/master/YXZHUSHOU_API.md)， 或使用 [码云issues](https://gitee.com/lua_development/yxzhushou/issues) ，我们会关注和回复。
+如有问题可以先参阅 [码云文档](https://gitee.com/lua_development/yxzhushou/blob/master/鱼叉助手API文档.md)， 或使用 [码云issues](https://gitee.com/lua_development/yxzhushou/issues) 留言，我们会关注和回复。
 
 - 鱼叉助手开发交流 QQ群：715467974（付费学习私聊群主）
-- 项目组合作联系 QQ：2787283623
-- [鱼叉助手开发教程](https://space.bilibili.com/72510501)
+- 项目组合作联系 QQ：2787283623 (人鱼情未了)
 
 # Lua 教学项目组
-哔哩哔哩(B站) | Youtube(油管) | 网易云课堂 | Lua讲师 | [码云目录](https://gitee.com/lua_development/yxzhushou/blob/master/renyu.md)
+
+讲师入驻条件：
+* 掌握 Lua 语言
+* 熟悉 鱼叉助手 开发流程
+* 熟悉 剪辑 软件
+
+成员：
+
+哔哩哔哩(B站) | Youtube(油管) | 网易云课堂 | 抖音 | [付费课程](https://gitee.com/lua_development/yxzhushou/blob/master/付费课程目录.md) | [免费课程](https://space.bilibili.com/72510501)
 
 [//]: contributor-faces
 
@@ -57,7 +45,16 @@
 [//]: contributor-faces
 
 # iOS App项目组
-底层架构师 | 开发工程师 | 管理员 | [码云更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/ioslog.md)
+
+App 开发入驻条件：
+* 掌握 Objective-C 、Lua 、 C/C++ 语言开发
+* 掌握 Objective-C 与 Lua 交互开发 
+* 掌握 Objective-C 与 C/C++ 交互开发
+* 拥有 iOS 开发者账号
+
+成员：
+
+底层架构师 | 开发工程师 | 管理员 | [App 更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/更新日志/iOS更新日志.md)
 
 [//]: contributor-faces
 
@@ -65,7 +62,7 @@
 
 [//]: contributor-faces
 
-iOS免越狱物联网 | 内测小组
+iOS 免越狱物联网 | Lua 内测小组
 
 [//]: contributor-faces
 
@@ -89,7 +86,14 @@ iOS免越狱物联网 | 内测小组
 [//]: contributor-faces
 
 # Android App项目组
-底层架构师 | 开发工程师 | 管理员 | [码云更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/Androidlog.md)
+
+App 开发入驻条件：
+* 掌握 Java 、 Lua 、 C/C++ 语言开发
+* 掌握 Java 与 Lua 交互开发 
+* 掌握 Java 与 C/C++ 交互开发
+
+底层架构师 | 开发工程师 | 管理员 | [Java 开发教程](https://docs.qq.com/mind/DVmRQZFFISUV2dXZp)
+ | [App 更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/更新日志/Android更新日志.md)
 
 [//]: contributor-faces
 
@@ -97,7 +101,7 @@ iOS免越狱物联网 | 内测小组
 
 [//]: contributor-faces
 
-Android Root/免Root | 内测小组
+Android Root/免Root | Lua 内测小组
 
 [//]: contributor-faces
 
@@ -121,7 +125,7 @@ Android Root/免Root | 内测小组
 [//]: contributor-faces
 
 # linux服务器 web项目组
-底层架构师 | 开发工程师 | 管理员 | [码云更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/linuxlog.md)
+底层架构师 | 开发工程师 | 管理员 | [更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/更新日志/Linux更新日志.md)
 
 [//]: contributor-faces
 
@@ -131,13 +135,58 @@ Android Root/免Root | 内测小组
 [//]: contributor-faces
 
 # VScode 插件项目组
-底层架构师 | 开发工程师 | 管理员 | [码云更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/CHANGELOG.md)
+
+入驻条件：
+* 掌握 TypeScript 、JavaScript 、C/C++ 语言开发
+* 掌握 node 环境开发
+* 掌握 VScode [中文文档](https://github.com/zifanzilog/VS-Code-Extension-Doc-ZH) 以及 VScode 功能 
+* 熟悉访问 GitHub 社区 技术
+
+简介：
+
+底层架构师 | 开发工程师 | 管理员 | [更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/更新日志/VScode插件更新日志.md)
 
 [//]: contributor-faces
 
 <a href="https://github.com/zifanzilog"><img src="mdimg/54623321.png" title="人鱼情未了" width="50" height="50"></a>
 
 [//]: contributor-faces
+
+# ESP8266/ESP32 物联网项目组
+
+入驻条件：
+* 掌握 Lua 语言开发
+* 掌握 单片机 开发流程
+* 熟悉 ESP8266/ESP32 物联网芯片 [NodeMCU Lua文档](https://nodemcu.readthedocs.io/en/release/)
+* 熟悉 电路 基础知识
+
+简介：
+
+底层架构师 | 开发工程师 | 管理员 | [更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/更新日志/ESP8266更新日志.md)
+
+[//]: contributor-faces
+
+<a href="https://github.com/zifanzilog"><img src="mdimg/54623321.png" title="人鱼情未了" width="50" height="50"></a>
+
+[//]: contributor-faces
+
+# 图像识别 算法项目组
+
+入驻条件：
+* 掌握 Lua 、C/C++ 、Java 语言开发
+* 对 数学 有兴趣
+* 熟悉 图片 与 像素 的运用
+
+简介：
+
+底层架构师 | 开发工程师 | 管理员 | [更新日志](https://gitee.com/lua_development/yxzhushou/blob/master/更新日志/图像识别更新日志.md)
+
+[//]: contributor-faces
+
+<a href="https://github.com/zifanzilog"><img src="mdimg/54623321.png" title="人鱼情未了" width="50" height="50"></a>
+
+[//]: contributor-faces
+
 
 # 特别感谢
 GitHub 社区开源作者

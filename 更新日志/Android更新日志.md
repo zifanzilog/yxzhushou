@@ -1,9 +1,10 @@
-# Android 更新日志
+# Android App更新日志
+
 ## v1.0.6
 日期：2020/11/11
 
 bug：
-+ 修复 [touchMove](./YXZHUSHOU_API.md/#touchMove) 移动函数,重置算法
++ 修复 [touchMove](./鱼叉助手API文档.md/#touchMove) 移动函数,重置算法
 + 修复 手机发热严重问题(录屏算法优化)
 
 ## v1.0.5
@@ -34,7 +35,7 @@ bug：(反馈作者:357339600)
 
 新增：
 + 可在手机端查看App更新日志功能
-+ 函数：[keepScreen](./YXZHUSHOU_API.md/#keepScreen)、[getColor](./YXZHUSHOU_API.md/#getColor)、[getColorRGB](./YXZHUSHOU_API.md/#getColorRGB)
++ 函数：[keepScreen](./鱼叉助手API文档.md/#keepScreen)、[getColor](./鱼叉助手API文档.md/#getColor)、[getColorRGB](./鱼叉助手API文档.md/#getColorRGB)
 
 bug：
 + 修复热更新无法下载的问题
@@ -44,7 +45,7 @@ bug：
 日期：2020/11/8
 
 bug：(反馈作者:506465336)
-+ 修复无法调用 [findColor](./YXZHUSHOU_API.md/#findColor)、[touchDown](./YXZHUSHOU_API.md/#touchDown)、[touchMove](./YXZHUSHOU_API.md/#touchMove)、[touchUp](./YXZHUSHOU_API.md/#touchUp) 等函数问题
++ 修复无法调用 [findColor](./鱼叉助手API文档.md/#findColor)、[touchDown](./鱼叉助手API文档.md/#touchDown)、[touchMove](./鱼叉助手API文档.md/#touchMove)、[touchUp](./鱼叉助手API文档.md/#touchUp) 等函数问题
 
 ## v1.0.0
 日期：2020/11/7
@@ -64,4 +65,4 @@ bug：(反馈作者:506465336)
 + 支持发送控制台信息到电脑（默认端口9999）
 + 支持手机内查看控制台信息
 + 支持保存图片到手机
-+ 函数：[findColor](./YXZHUSHOU_API.md/#findColor)、[touchDown](./YXZHUSHOU_API.md/#touchDown)、[touchMove](./YXZHUSHOU_API.md/#touchMove)、[touchUp](./YXZHUSHOU_API.md/#touchUp)、[getScreenSize](./YXZHUSHOU_API.md/#getScreenSize)、[mSleep](./YXZHUSHOU_API.md/#mSleep)
++ 函数：[findColor](./鱼叉助手API文档.md/#findColor)、[touchDown](./鱼叉助手API文档.md/#touchDown)、[touchMove](./鱼叉助手API文档.md/#touchMove)、[touchUp](./鱼叉助手API文档.md/#touchUp)、[getScreenSize](./鱼叉助手API文档.md/#getScreenSize)、[mSleep](./鱼叉助手API文档.md/#mSleep)

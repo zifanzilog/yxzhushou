@@ -1,7 +1,8 @@
 # 鱼叉助手 API(内部测试..尚未开放)
 
 ### iOS/Android 通用函数
-说明：删除线表示正在内测，尚未开放，请勿使用
+* 说明：删除线表示正在内测，尚未开放，请勿使用
+* 反馈问题使用 [码云issues](https://gitee.com/lua_development/yxzhushou/issues) 留言，我们会关注和回复。
 
 **触摸函数**
 * [init](#init) 初始化屏幕方向
@@ -77,14 +78,97 @@ init(appid, rotate)
 --[[说明：假如使用竖屏对截图进行取色，需要告诉脚本 init("0",0) 开发取色方向为竖屏，如果实际运行时，当前为横屏与开发不一致，系统会对每个受影响函数的坐标参数转换为横屏坐标点，当前为竖屏则不作修改。]]
 
 --竖屏
-init("0",0);
+init("0", 0);
 
 --横屏 home 在右
-init("0",1);
+init("0", 1);
 ```
 受 [init](#init) 影响函数：
 + [touchDown](#touchDown) 触摸按下 | [touchMove](#touchMove) 触摸移动 | [touchUp](#touchUp) 触摸抬起
 + [findColor](#findColor) 区域多点找色 | [getColorRGB](#getColorRGB) 获取单点RGB
+
+# touchDown 
+触摸按下
+
+参数|类型|说明
+-|-|-
+id|<font color=#00FFFF>number</font>|手指 id，Root/越狱支持多指操作 1 - 10，免越狱/免Root 设置 1
+x, y|<font color=#00FFFF>number</font>|坐标
+
+返回值|类型|说明
+-|-|-
+nil|nil|nil
+
+语法：
+```lua
+touchDown(id, x, y)
+```
+
+脚本示例：
+```lua
+--单击
+touchDown(1, 100, 100)
+mSleep(50)
+touchMove(1, 100, 100)
+mSleep(50)
+touchUp(1, 100, 100)
+```
+
+# touchMove 
+移动
+
+参数|类型|说明
+-|-|-
+id|<font color=#00FFFF>number</font>|手指 id，Root/越狱支持多指操作 1 - 10，免越狱/免Root 设置 1
+x, y|<font color=#00FFFF>number</font>|坐标
+
+返回值|类型|说明
+-|-|-
+nil|nil|nil
+
+语法：
+```lua
+touchMove(id, x, y)
+```
+
+脚本示例：
+```lua
+--移动距离过远，需要分段使用
+touchDown(1, 100, 100)
+mSleep(50)
+--移动每次坐标值不能过大，与实际位置小于50以内最稳定
+touchMove(1, 150, 150)
+--移动需要时间，延时越大越稳定
+mSleep(100)
+touchMove(1, 200, 200)
+mSleep(100)
+touchUp(1, 200, 200)
+```
+
+# touchUp 
+触摸抬起
+
+参数|类型|说明
+-|-|-
+id|<font color=#00FFFF>number</font>|手指 id，Root/越狱支持多指操作 1 - 10，免越狱/免Root 设置 1
+x, y|<font color=#00FFFF>number</font>|坐标
+
+返回值|类型|说明
+-|-|-
+nil|nil|nil
+
+语法：
+```lua
+touchUp(id, x, y)
+```
+
+脚本示例：
+```lua
+--单击
+touchDown(1, 100, 100)
+mSleep(50)
+touchUp(1, 100, 100)
+```
 
 # findColor
 区域多点找色<font color=#ffff00>（推荐使用）</font>
@@ -200,32 +284,47 @@ keepScreen(false);
 提高 [findColor](#findColor) 函数找色效率：
 + [keepScreen]() 保持屏幕
 
-## getMobilephoneType
+# getMobilephoneType
 获取手机型号
 ```lua
-    local var = getMobilephoneType()
-    --安卓
-    var = "xiaomi 8"
-    --iOS
-    var = "iPhone 8"/"iPhone 7 Plus"
+local var = getMobilephoneType()
+--安卓
+var = "xiaomi 8"
+--iOS
+var = "iPhone 8"/"iPhone 7 Plus"
 ```
 
-## getOSType
+# getOSType
 获取系统类型
 ```lua
-    local var = getOSType()
-    --安卓
-    var = "android"
-    --iOS
-    var = "iOS"
+local var = getOSType()
+--安卓
+var = "android"
+--iOS
+var = "iOS"
 ```
 
-## isPriviateMode
+# isPriviateMode
 获取系统环境类型
+
+参数|类型|说明
+-|-|-
+id|<font color=#00FFFF>number</font>|手指 id，Root/越狱支持多指操作 1 - 10，免越狱/免Root 设置 1
+x, y|<font color=#00FFFF>number</font>|坐标
+
+返回值|类型|说明
+-|-|-
+nil|nil|nil
+
+语法：
 ```lua
-    local var = isPriviateMode()
-    --越狱/ROOT
-    var = "1"
-    --免越狱/免ROOT
-    var = "0"
+touchUp(id, x, y)
+```
+
+```lua
+local var = isPriviateMode()
+--越狱/ROOT
+var = "1"
+--免越狱/免ROOT
+var = "0"
 ```
