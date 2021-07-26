@@ -30,7 +30,7 @@
 * [sysLog](#sysLog) 系统日志
 * [lua_exit](#lua_exit) 退出脚本执行
 
-**UI界面函数**
+**界面函数**
 * ~~[showUI](#showUI) 显示自定义脚本界面~~
 * ~~[getUIContent](#getUIContent) 获取UI文件信息~~
 * ~~[resetUIConfig](#resetUIConfig) 重置UI默认选项~~
@@ -47,7 +47,10 @@
 * [getMobilephoneType](#getMobilephoneType) 获取系统型号
 * ~~[getLocalInfo](#getLocalInfo) 获取系统语言属性~~
 
-**仅支持Android函数**
+**安卓函数**
+
+仅支持Android使用
+
 * ~~[toast](#toast) 提示~~
 * [createHUD](#createHUD) 创建HUD内容
 * [showHUD](#showHUD) 显示HUD内容
@@ -106,8 +109,7 @@ touchDown(id, x, y)
 
 脚本示例：
 ```lua
---单击
-touchDown(1, 100, 100)
+touchDown(1, 100, 100) --单击
 mSleep(50)
 touchMove(1, 100, 100)
 mSleep(50)
@@ -133,13 +135,10 @@ touchMove(id, x, y)
 
 脚本示例：
 ```lua
---移动距离过远，需要分段使用
-touchDown(1, 100, 100)
+touchDown(1, 100, 100) --移动距离过远，需要分段使用
 mSleep(50)
---移动每次坐标值不能过大，与实际位置小于50以内最稳定
-touchMove(1, 150, 150)
---移动需要时间，延时越大越稳定
-mSleep(100)
+touchMove(1, 150, 150) --移动每次坐标值不能过大，与实际位置小于50以内最稳定
+mSleep(100)            --移动需要时间，延时越大越稳定
 touchMove(1, 200, 200)
 mSleep(100)
 touchUp(1, 200, 200)
@@ -164,8 +163,7 @@ touchUp(id, x, y)
 
 脚本示例：
 ```lua
---单击
-touchDown(1, 100, 100)
+touchDown(1, 100, 100) --单击
 mSleep(50)
 touchUp(1, 100, 100)
 ```
