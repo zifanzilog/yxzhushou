@@ -3,6 +3,10 @@
 + **鱼叉脚本** 使用 **Lua** 语言进行编写,支持 **Lua** 的所有语法与基本函数，配合 **鱼叉脚本** 特有的函数命令，实现找图、找色、触摸等高级功能。
 + 编写脚本前请先学习 **Lua** [基本语法教程](https://www.bilibili.com/video/BV1rt411f7GY) | **Lua** [脚本入门教程](https://www.bilibili.com/video/BV1SW411C7u3)
 
+# 下载安装
+
+鱼叉助手 VScode [插件下载](https://gitee.com/lua_development/yxzhushou/blob/master/vscode插件安装包) | [安装方法](https://gitee.com/lua_development/yxzhushou/blob/master/vscode插件安装包/安装方法.png)
+
 # 文档
 
 引擎版本：1.0.0
