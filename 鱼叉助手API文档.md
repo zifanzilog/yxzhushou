@@ -37,7 +37,7 @@
 
 **设备函数**
 * [getScreenSize](#getScreenSize) 获取屏幕竖屏分辨率
-* [getScreenDirection](#getScreenDirection) 获取屏幕方向
+* ~~[getScreenDirection](#getScreenDirection) 获取屏幕方向~~
 * ~~[setScreenScale](#setScreenScale) 设置屏幕等比例自动缩放~~
 * ~~[setScreenAllScale](#setScreenAllScale) 设置屏幕全分辨率自动缩放~~
 * [mTime](#mTime) 获取本地时间戳（毫秒）
@@ -67,7 +67,7 @@
 appid|<font color=#FF8C00>string</font>|兼容叉叉，暂时无用
 rotate|<font color=#00FFFF>number</font>|0 - 竖屏，1 - Home在右，~~2 - Home在左~~
 
-**说明：**
+**参数说明：**
 + 假如使用竖屏对截图进行取色，需要告诉脚本 init("0",0) 开发取色方向为竖屏，如果实际运行时，当前为横屏与开发不一致，系统会对每个受影响函数的坐标参数转换为横屏坐标点，当前屏幕方向与开发方向一致则不作修改。
 
 返回值|类型|说明
@@ -81,7 +81,6 @@ init(appid, rotate)
 
 **脚本示例：**
 ```lua
-
 --开发方向为竖屏
 init("0", 0);
 
@@ -193,7 +192,7 @@ hdir|<font color=#00FFFF>number</font>|\[选填\] 水平搜索方向，0表示�
 vdir|<font color=#00FFFF>number</font>|\[选填\] 垂直搜索方向，0表示从上到下，1表示从下到上，默认为0
 priority|<font color=#00FFFF>number</font>|\[选填\] 搜索优先级，0表示水平优先，1表示垂直优先，默认为0
 
-**说明：**
+**参数说明：**
 * 起始点坐标值填写0,0时，偏移位置坐标值使用相对坐标；填写为非0,0的坐标时，则认为偏移位置坐标为绝对坐标，找色时，将根据填写的绝对坐标换算出的相对坐标进行寻找。
 * 偏移位置颜色的偏色值或相似度可任意选用，同时填写了偏色值和相似度时，将以偏色为准，忽略相似度值。
 * 个别偏移位置颜色偏色值或相似度优先于全局找色相似度，全局找色相似度对未指定偏色或相似度的颜色有效。
@@ -203,7 +202,7 @@ priority|<font color=#00FFFF>number</font>|\[选填\] 搜索优先级，0表示�
 x, y|<font color=#00FFFF>number</font>|`[成功]` 返回颜色第一个坐标，`[失败]` 返回 -1，-1
 
 **关于搜索方向：**
-hdir|vdir|priority|<center>区域搜索路径</center>
+hdir|vdir|priority|区域搜索路径
 -|-|-|-
 0|0|0|左上角 → 右上角 → 左下角 → 右下角
 0|0|1|左上角 → 左下角 → 右上角 → 右下角
@@ -215,10 +214,8 @@ hdir|vdir|priority|<center>区域搜索路径</center>
 1|1|1|右下角 → 右上角 → 左下角 → 左上角
 
 **语法：**
++ 第一种语法:
 ```lua
---[[说明：第一种和第二种最终都会自动转换成第三种语法]]
-
---第一种语法:
 local x, y = findColor(
     {left, top, right, bottom},
     "x0|y0|color0,x1|y1|color1,x2|y2|color2,...",
@@ -227,8 +224,10 @@ local x, y = findColor(
     vdir,
     priority
     )
+```
 
---第二种语法:
++ 第二种语法:
+```lua
 local x, y = findColor(
     {left, top, right, bottom},
     "x0|y0|color0,x1|y1|color1(|degree1),x2|y2|color2(-offset2),...",
@@ -237,8 +236,10 @@ local x, y = findColor(
     vdir,
     priority
     )
+```
 
---第三种语法:
++ 第三种语法:
+```lua
 local x, y = findColor(
     {left, top, right, bottom},
     {
@@ -253,6 +254,9 @@ local x, y = findColor(
     priority
     )
 ```
+**语法说明：**
++ 第一种语法和第二种语法最终都会自动转换成第三种语法
+
 **脚本示例：**
 ```lua
 --开启保持屏幕
@@ -311,9 +315,9 @@ keepScreen(false);
 # findColors
 ### **高级区域多点找色<font color=#ffff00>（推荐使用）</font>**
 
-**说明：**
-
-[findColor](#findColor) 扩展函数
+参数|类型|说明
+-|-|-
+参考 [findColor](#findColor)|参考 [findColor](#findColor)|参考 [findColor](#findColor)
 
 返回值|类型|说明
 -|-|-
@@ -352,8 +356,8 @@ local color = getColor(x, y)
 ```
 
 **脚本示例：**
++ 如果某点符合某颜色则点击
 ```lua
---如果某点符合某颜色则点击
 if getColor(100, 100) == 0xffffff then 
    touchDown(1, 100, 100)
    mSleep(50)
@@ -582,6 +586,11 @@ nil|nil|nil
 sysLog(contents)
 ```
 
+**脚本示例：**
+```lua
+sysLog("hello world!")
+```
+
 **注意事项：**
 + 该函数将日志输出到对应平台的开发窗口
 + 该函数可通过 [setSysConfig](#setSysConfig) 设置项"isFileLog"设置为写入日志到文件，详情查看“[setSysConfig](#setSysConfig) 设置系统参数”条目
@@ -589,11 +598,43 @@ sysLog(contents)
 # lua_exit
 ### **退出脚本执行**
 
+参数|类型|说明
+-|-|-
+nil|nil|nil
+
+返回值|类型|说明
+-|-|-
+nil|nil|nil
+
 **脚本示例：**
 ```lua
 print("1")
 lua_exit() --结束
 print("2") --无法到达
+```
+
+# getScreenSize
+### **获取屏幕竖屏分辨率**
+
+参数|类型|说明
+-|-|-
+nil|nil|nil
+
+返回值|类型|说明
+-|-|-
+width|<font color=#00FFFF>number</font>|获取到的屏幕竖直（Home 键在下方时）宽度
+height|<font color=#00FFFF>number</font>|获取到的屏幕竖直（Home 键在下方时）高度
+
+**语法：**
+```lua
+local width,height = getScreenSize()
+```
+
+**脚本示例：**
+```lua
+local width,height = getScreenSize()
+print("竖屏 宽 = " .. width)
+print("竖屏 高 = " .. height)
 ```
 
 # getMobilephoneType
