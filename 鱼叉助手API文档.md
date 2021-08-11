@@ -1,16 +1,19 @@
 # 鱼叉助手 API(内部测试..尚未开放)
 
 #### iOS/Android 通用函数
+
 * 说明：删除线表示正在内测，尚未开放，请勿使用
 * 反馈问题使用 [码云issues](https://gitee.com/lua_development/yxzhushou/issues) 留言，我们会关注和回复。
 
 **触摸函数**
+
 * [init](#init) 初始化屏幕方向
 * [touchDown](#touchDown) 触摸按下
 * [touchMove](#touchMove) 移动
 * [touchUp](#touchUp) 触摸抬起
 
 **图像函数**
+
 * [findColor](#findColor) 区域多点找色<font color=#ffff00>（推荐使用）</font>
 * [findColors](#findColors) 高级区域多点找色<font color=#ffff00>（推荐使用）</font>
 * [getColor](#getColorRGB) 获取屏幕某点颜色值
@@ -21,21 +24,25 @@
 * [binarizeImage](#binarizeImage) 二值化图片转换为table
 
 **功能函数**
+
 * ~~[http](#http) HTTPget/HTTPpost 网络请求~~
 * ~~[base64encode](#base64encode) base64编码~~
 * ~~[base64decode](#base64decode) base64解码~~
 
 **其他函数**
+
 * [mSleep](#mSleep) 延时
 * [sysLog](#sysLog) 系统日志
 * [lua_exit](#lua_exit) 退出脚本执行
 
 **界面函数**
+
 * ~~[showUI](#showUI) 显示自定义脚本界面~~
 * ~~[getUIContent](#getUIContent) 获取UI文件信息~~
 * ~~[resetUIConfig](#resetUIConfig) 重置UI默认选项~~
 
 **设备函数**
+
 * [getScreenSize](#getScreenSize) 获取屏幕竖屏分辨率
 * ~~[getScreenDirection](#getScreenDirection) 获取屏幕方向~~
 * ~~[setScreenScale](#setScreenScale) 设置屏幕等比例自动缩放~~
@@ -60,6 +67,7 @@
 * ~~[dialogInput](#dialogInput) 带参数的对话框~~
 
 # init
+
 ### **初始化屏幕方向**
 
 参数|类型|说明
@@ -68,6 +76,7 @@ appid|<font color=#FF8C00>string</font>|兼容叉叉，暂时无用
 rotate|<font color=#00FFFF>number</font>|0 - 竖屏，1 - Home在右，~~2 - Home在左~~
 
 **参数说明：**
+
 + 假如使用竖屏对截图进行取色，需要告诉脚本 init("0",0) 开发取色方向为竖屏，如果实际运行时，当前为横屏与开发不一致，系统会对每个受影响函数的坐标参数转换为横屏坐标点，当前屏幕方向与开发方向一致则不作修改。
 
 返回值|类型|说明
@@ -75,11 +84,13 @@ rotate|<font color=#00FFFF>number</font>|0 - 竖屏，1 - Home在右，~~2 - Hom
 nil|nil|nil
 
 **语法：**
+
 ```lua
 init(appid, rotate)
 ```
 
 **脚本示例：**
+
 ```lua
 --开发方向为竖屏
 init("0", 0);
@@ -96,7 +107,8 @@ init("0", 1);
 + [getColor](#getColor) 获取屏幕某点颜色值
 + [getColorRGB](#getColorRGB) 获取屏幕某点颜色R,G,B值
 
-# touchDown 
+# touchDown
+
 ### **触摸按下**
 
 参数|类型|说明
@@ -109,11 +121,13 @@ x, y|<font color=#00FFFF>number</font>|坐标
 nil|nil|nil
 
 **语法：**
+
 ```lua
 touchDown(id, x, y)
 ```
 
 **脚本示例：**
+
 ```lua
 touchDown(1, 100, 100) --单击
 mSleep(50)
@@ -122,7 +136,8 @@ mSleep(50)
 touchUp(1, 100, 100)
 ```
 
-# touchMove 
+# touchMove
+
 ### **移动**
 
 参数|类型|说明
@@ -135,11 +150,13 @@ x, y|<font color=#00FFFF>number</font>|坐标
 nil|nil|nil
 
 **语法：**
+
 ```lua
 touchMove(id, x, y)
 ```
 
 **脚本示例：**
+
 ```lua
 touchDown(1, 100, 100) --移动距离过远，需要分段使用
 mSleep(50)
@@ -151,6 +168,7 @@ touchUp(1, 200, 200)
 ```
 
 # touchUp 
+
 ### **触摸抬起**
 
 参数|类型|说明
@@ -175,6 +193,7 @@ touchUp(1, 100, 100)
 ```
 
 # findColor
+
 ### **区域多点找色<font color=#ffff00>（推荐使用）</font>**
 
 参数|类型|说明
@@ -193,6 +212,7 @@ vdir|<font color=#00FFFF>number</font>|\[选填\] 垂直搜索方向，0表示�
 priority|<font color=#00FFFF>number</font>|\[选填\] 搜索优先级，0表示水平优先，1表示垂直优先，默认为0
 
 **参数说明：**
+
 * 起始点坐标值填写0,0时，偏移位置坐标值使用相对坐标；填写为非0,0的坐标时，则认为偏移位置坐标为绝对坐标，找色时，将根据填写的绝对坐标换算出的相对坐标进行寻找。
 * 偏移位置颜色的偏色值或相似度可任意选用，同时填写了偏色值和相似度时，将以偏色为准，忽略相似度值。
 * 个别偏移位置颜色偏色值或相似度优先于全局找色相似度，全局找色相似度对未指定偏色或相似度的颜色有效。
@@ -202,6 +222,7 @@ priority|<font color=#00FFFF>number</font>|\[选填\] 搜索优先级，0表示�
 x, y|<font color=#00FFFF>number</font>|`[成功]` 返回颜色第一个坐标，`[失败]` 返回 -1，-1
 
 **关于搜索方向：**
+
 hdir|vdir|priority|区域搜索路径
 -|-|-|-
 0|0|0|左上角 → 右上角 → 左下角 → 右下角
@@ -214,7 +235,9 @@ hdir|vdir|priority|区域搜索路径
 1|1|1|右下角 → 右上角 → 左下角 → 左上角
 
 **语法：**
+
 + 第一种语法:
+
 ```lua
 local x, y = findColor(
     {left, top, right, bottom},
@@ -227,6 +250,7 @@ local x, y = findColor(
 ```
 
 + 第二种语法:
+
 ```lua
 local x, y = findColor(
     {left, top, right, bottom},
@@ -239,6 +263,7 @@ local x, y = findColor(
 ```
 
 + 第三种语法:
+
 ```lua
 local x, y = findColor(
     {left, top, right, bottom},
@@ -255,15 +280,15 @@ local x, y = findColor(
     )
 ```
 **语法说明：**
+
 + 第一种语法和第二种语法最终都会自动转换成第三种语法
 
 **脚本示例：**
-```lua
---开启保持屏幕
-keepScreen(true);
 
---相对坐标写法：
---[[说明：第一个坐标(0,0)，系统则判断为相对坐标]]
++ 相对坐标写法：
+
+```lua
+--第一个坐标(0,0)，系统则判断为相对坐标
 local x, y = findColor(
     {0, 0, 639, 959},
     "0|0|0x181F85,29|1|0x00BBFE|90,103|-4|0x0B6BBE-0x050505,65|9|0x150972"
@@ -276,9 +301,12 @@ local x, y = findColor(
         {x = 103, y = -4, color = 0x0B6BBE, offset = 0x050505},
         {x = 65, y = 9, color = 0x150972}
     })
+```
 
---绝对坐标写法：
---[[说明：第一个坐标(268,802)非(0,0)则系统判断为绝对坐标，会自动转换成(0,0)，再根据第一个坐标对其他位置进行相对坐标转换]]
++ 绝对坐标写法：
+
+```lua
+--第一个坐标(268,802)非(0,0)则系统判断为绝对坐标，会自动转换成(0,0)，再根据第一个坐标对其他位置进行相对坐标转换
 local x, y = findColor(
     {0, 0, 639, 959},
     "268|802|0x181F85,297|803|0x00BBFE|90,371|798|0x0B6BBE-050505,333|811|0x150972"
@@ -291,28 +319,32 @@ local x, y = findColor(
         {x = 371, y = 798 color = 0x0B6BBE, offset = 0x050505},
         {x = 333, y = 811 color = 0x150972}
     })
+```
 
---单点偏色的写法：
---[[说明：默认为95，如果设置偏色，会优先使用偏色值作为相似度]]
++ 单点偏色的写法：
+
+```lua
+--如果设置偏色，会优先使用偏色值作为相似度
 local x, y = findColor(
     {0, 0, 749, 1333}, 
     "0|0|0xf12735-0x202002,387|-553|0x3eeb5d-0x555555,268|-148|0x2178fa",
     95, 0, 0, 0)
+```
 
---单点相似度的写法：
---[[说明：默认为95，如果设置单点80，会优先使用80]]
++ 单点相似度的写法：
+
+```lua
+--如果设置单点相似度80，会优先使用80
 local x, y = findColor(
     {0, 0, 749, 1333}, 
     "0|0|0xf12735|80,387|-553|0x3eeb5d|75,268|-148|0x2178fa",
     95, 0, 0, 0)
-
---关闭保持屏幕
-keepScreen(false);
 ```
 提高 [findColor](#findColor) 函数找色效率：
 + [keepScreen]() 保持屏幕
 
 # findColors
+
 ### **高级区域多点找色<font color=#ffff00>（推荐使用）</font>**
 
 参数|类型|说明
@@ -323,23 +355,31 @@ keepScreen(false);
 -|-|-
 point|<font color=#FFFF00>table</font>|`[成功]` 返回所有符合条件的参照点的坐标，最多99个 `[失败]` 返回空表 { }
 
-**返回的 table 为key-value的形式，如下：**
+**脚本示例：**
+
 ```lua
+local point = findColors(
+    {0, 0, 639, 959},
+    "268|802|0x181F85,297|803|0x00BBFE|90,371|798|0x0B6BBE-050505,333|811|0x150972"
+)
+
+--返回的 table 为key-value的形式，如下：
 --成功
-local point = {
+point = {
  {x = 100,y = 110},
  {x = 200,y = 210},
  {x = 300,y = 310},
  ...
 }
 --失败
-local point = {}
+point = {}
 ```
 
 提高 [findColors](#findColors) 函数找色效率：
 + [keepScreen]() 保持屏幕
 
 # getColor
+
 ### **获取屏幕某点颜色值**
 
 参数|类型|说明
@@ -351,12 +391,15 @@ x，y|<font color=#00FFFF>number</font>|获取颜色值的屏幕坐标
 color|<font color=#00FFFF>number</font>|该点的十进制颜色值RGB
 
 **语法：**
+
 ```lua
 local color = getColor(x, y)
 ```
 
 **脚本示例：**
+
 + 如果某点符合某颜色则点击
+
 ```lua
 if getColor(100, 100) == 0xffffff then 
    touchDown(1, 100, 100)
@@ -365,9 +408,11 @@ if getColor(100, 100) == 0xffffff then
 end
 ```
 **注意事项：**
+
 * [getColor](#getColor) 函数获得的颜色值十六进制文本中，实际顺序为RGB
 
 # getColorRGB
+
 ### **获取屏幕某点颜色R,G,B值**
 
 参数|类型|说明
@@ -379,12 +424,15 @@ x，y|<font color=#00FFFF>number</font>|获取颜色值的屏幕坐标
 r，g，b |<font color=#00FFFF>number</font>|该点的十进制颜色值RGB
 
 **语法：**
+
 ```lua
 local r, g, b = getColorRGB(x, y)
 ```
 
 **脚本示例：**
+
 + 判断某点的颜色与某颜色相似：
+
 ```lua
 local r,g,b = getColorRGB(100,100); --获取该点的R,G,B值
 if r > 200 and b < 150 then   --判断颜色强度
@@ -393,7 +441,9 @@ if r > 200 and b < 150 then   --判断颜色强度
     touchUp(1,100,100)
 end
 ```
+
 + 封装一个单点模糊比色函数：
+
 ```lua
 function isColor(x,y,c,s)   --x,y为坐标值，c为颜色值，s为相似度，范围0~100。
     local fl,abs = math.floor,math.abs
@@ -411,7 +461,9 @@ if isColor(963,  961, 0x7b593f,90) then
     touchUp(963, 961)
 end
 ```
+
 + 封装一个多点比色函数：
+
 ```lua
 function isColors(color,s) --固定坐标 多点比色
 	s = s or 95  --相似度
@@ -443,9 +495,11 @@ keepScreen(false);--关
 ```
 
 **注意事项：**
+
 * [getColorRGB](#getColorRGB) 函数获得的颜色值十六进制文本中，实际顺序为RGB
 
 # keepScreen
+
 ### **保持屏幕**
 
 参数|类型|说明
@@ -457,11 +511,13 @@ bool|<font color=#00FF00>boolean</font>| 启动 = true ，关闭 = false
 nil|nil|nil
 
 **语法：**
+
 ```lua
 keepScreen(bool)
 ```
 
 **脚本示例：**
+
 ```lua
 keepScreen(true); --停止截图，保留第一次截图
 for y = 1, 640, 10 do
@@ -474,6 +530,7 @@ for y = 1, 640, 10 do
 end
 keepScreen(false); --恢复截图
 ```
+
 受 [keepScreen](#keepScreen) 影响函数：
 + [findColor](#findColor) 区域多点找色
 + [findColors](#findColors) 高级区域多点找色
@@ -481,6 +538,7 @@ keepScreen(false); --恢复截图
 + [getColorRGB](#getColorRGB) 获取屏幕某点颜色R,G,B值
 
 # binarizeImage
+
 ### **二值化图片转换为table**
 
 参数|类型|说明
@@ -493,6 +551,7 @@ diff|<font color=#FFFF00>table</font>|`[必填]` {"颜色1-偏色1", "颜色-偏
 colorTbl|<font color=#FFFF00>table</font>|图像二值化后的table，0 代表黑色，1 代表白色
 
 **语法：**
+
 ```lua
  local colorTbl = binarizeImage({
    rect = {x1, y1, x2, y2},
@@ -501,6 +560,7 @@ colorTbl|<font color=#FFFF00>table</font>|图像二值化后的table，0 代表�
 ```
 
 **脚本示例：**
+
 ```lua
 local colorTbl = binarizeImage({
   rect = {30, 80, 53, 101},
@@ -538,6 +598,7 @@ colorTbl格式类似这样：
 ```
 
 # mSleep
+
 ### **延时**
 
 参数|类型|说明
@@ -549,11 +610,13 @@ interval|<font color=#00FFFF>number</font>|单位为毫秒，脚本暂停执行�
 nil|nil|nil
 
 **语法：**
+
 ```lua
 mSleep(interval)
 ```
 
 **脚本示例：**
+
 ```lua
 --延迟5秒
 mSleep(5000)
@@ -565,12 +628,14 @@ touchUp(1, 200, 300);   --抬起
 ```
 
 **注意事项：**
+
 * 延迟函数一般是用来模拟人在界面上的操作，因此要考虑人在各种情况下的延迟、界面加载时的响应时间。
 * 延迟间隔不可过短，当 interval <= 50 ms 时，延迟精确度大幅下降，当 interval <= 16 ms 时，实际延迟约在16 ms左右。
 * 请勿将此函数用于长时间的精确计时。
 * 1 秒 (s) = 1000 毫秒 (ms)。
 
 # sysLog
+
 ### **系统日志**
 
 参数|类型|说明
@@ -582,20 +647,24 @@ content|<font color=#FF8C00>string</font>|需要显示的日志内容
 nil|nil|nil
 
 **语法：**
+
 ```lua
 sysLog(contents)
 ```
 
 **脚本示例：**
+
 ```lua
 sysLog("hello world!")
 ```
 
 **注意事项：**
+
 + 该函数将日志输出到对应平台的开发窗口
 + 该函数可通过 [setSysConfig](#setSysConfig) 设置项"isFileLog"设置为写入日志到文件，详情查看“[setSysConfig](#setSysConfig) 设置系统参数”条目
 
 # lua_exit
+
 ### **退出脚本执行**
 
 参数|类型|说明
@@ -607,6 +676,7 @@ nil|nil|nil
 nil|nil|nil
 
 **脚本示例：**
+
 ```lua
 print("1")
 lua_exit() --结束
@@ -614,6 +684,7 @@ print("2") --无法到达
 ```
 
 # getScreenSize
+
 ### **获取屏幕竖屏分辨率**
 
 参数|类型|说明
@@ -626,11 +697,13 @@ width|<font color=#00FFFF>number</font>|获取到的屏幕竖直（Home 键在�
 height|<font color=#00FFFF>number</font>|获取到的屏幕竖直（Home 键在下方时）高度
 
 **语法：**
+
 ```lua
 local width,height = getScreenSize()
 ```
 
 **脚本示例：**
+
 ```lua
 local width,height = getScreenSize()
 print("竖屏 宽 = " .. width)
@@ -638,6 +711,7 @@ print("竖屏 高 = " .. height)
 ```
 
 # getMobilephoneType
+
 ### **获取手机型号**
 
 参数|类型|说明
@@ -649,11 +723,13 @@ var|<font color=#FF8C00>string</font>|手机型号
 nil|nil|nil
 
 **语法：**
+
 ```lua
 getMobilephoneType()
 ```
 
 **脚本示例：**
+
 ```lua
 local var = getMobilephoneType()
 --安卓
@@ -663,6 +739,7 @@ var = "iPhone 8"/"iPhone 7 Plus"
 ```
 
 # getOSType
+
 ### **获取系统类型**
 
 参数|类型|说明
@@ -674,11 +751,13 @@ var|<font color=#FF8C00>string</font>|系统类型
 nil|nil|nil
 
 **语法：**
+
 ```lua
 getOSType()
 ```
 
 **脚本示例：**
+
 ```lua
 local var = getOSType()
 --安卓
@@ -688,6 +767,7 @@ var = "iOS"
 ```
 
 # isPriviateMode
+
 ### **获取系统环境类型**
 
 参数|类型|说明
@@ -699,11 +779,13 @@ var|<font color=#FF8C00>string</font>|系统环境类型
 nil|nil|nil
 
 **语法：**
+
 ```lua
 isPriviateMode()
 ```
 
 **脚本示例：**
+
 ```lua
 local var = isPriviateMode()
 --越狱/ROOT
