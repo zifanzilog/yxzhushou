@@ -1,6 +1,6 @@
 # 鱼叉助手 API(内部测试..尚未开放)
 
-### iOS/Android 通用函数
+#### iOS/Android 通用函数
 * 说明：删除线表示正在内测，尚未开放，请勿使用
 * 反馈问题使用 [码云issues](https://gitee.com/lua_development/yxzhushou/issues) 留言，我们会关注和回复。
 
@@ -60,7 +60,7 @@
 * ~~[dialogInput](#dialogInput) 带参数的对话框~~
 
 # init
-## **初始化屏幕方向**
+### **初始化屏幕方向**
 
 参数|类型|说明
 -|-|-
@@ -98,7 +98,7 @@ init("0", 1);
 + [getColorRGB](#getColorRGB) 获取屏幕某点颜色R,G,B值
 
 # touchDown 
-## **触摸按下**
+### **触摸按下**
 
 参数|类型|说明
 -|-|-
@@ -124,7 +124,7 @@ touchUp(1, 100, 100)
 ```
 
 # touchMove 
-## **移动**
+### **移动**
 
 参数|类型|说明
 -|-|-
@@ -152,7 +152,7 @@ touchUp(1, 200, 200)
 ```
 
 # touchUp 
-## **触摸抬起**
+### **触摸抬起**
 
 参数|类型|说明
 -|-|-
@@ -176,7 +176,7 @@ touchUp(1, 100, 100)
 ```
 
 # findColor
-## **区域多点找色<font color=#ffff00>（推荐使用）</font>**
+### **区域多点找色<font color=#ffff00>（推荐使用）</font>**
 
 参数|类型|说明
 -|-|-
@@ -309,7 +309,7 @@ keepScreen(false);
 + [keepScreen]() 保持屏幕
 
 # findColors
-**<font size='5'>高级区域多点找色</font><font color=#ffff00>（推荐使用）</font>**
+### **高级区域多点找色<font color=#ffff00>（推荐使用）</font>**
 
 **说明：**
 
@@ -336,7 +336,7 @@ local point = {}
 + [keepScreen]() 保持屏幕
 
 # getColor
-## **获取屏幕某点颜色值**
+### **获取屏幕某点颜色值**
 
 参数|类型|说明
 -|-|-
@@ -364,7 +364,7 @@ end
 * [getColor](#getColor) 函数获得的颜色值十六进制文本中，实际顺序为RGB
 
 # getColorRGB
-## **获取屏幕某点颜色R,G,B值**
+### **获取屏幕某点颜色R,G,B值**
 
 参数|类型|说明
 -|-|-
@@ -442,7 +442,7 @@ keepScreen(false);--关
 * [getColorRGB](#getColorRGB) 函数获得的颜色值十六进制文本中，实际顺序为RGB
 
 # keepScreen
-## **保持屏幕**
+### **保持屏幕**
 
 参数|类型|说明
 -|-|-
@@ -477,7 +477,7 @@ keepScreen(false); --恢复截图
 + [getColorRGB](#getColorRGB) 获取屏幕某点颜色R,G,B值
 
 # binarizeImage
-## **二值化图片转换为table**
+### **二值化图片转换为table**
 
 参数|类型|说明
 -|-|-
@@ -534,7 +534,7 @@ colorTbl格式类似这样：
 ```
 
 # mSleep
-## **延时**
+### **延时**
 
 参数|类型|说明
 -|-|-
@@ -567,7 +567,7 @@ touchUp(1, 200, 300);   --抬起
 * 1 秒 (s) = 1000 毫秒 (ms)。
 
 # sysLog
-## **系统日志**
+### **系统日志**
 
 参数|类型|说明
 -|-|-
@@ -587,7 +587,7 @@ sysLog(contents)
 + 该函数可通过 [setSysConfig](#setSysConfig) 设置项"isFileLog"设置为写入日志到文件，详情查看“[setSysConfig](#setSysConfig) 设置系统参数”条目
 
 # lua_exit
-## **退出脚本执行**
+### **退出脚本执行**
 
 **脚本示例：**
 ```lua
@@ -597,7 +597,7 @@ print("2") --无法到达
 ```
 
 # getMobilephoneType
-## **获取手机型号**
+### **获取手机型号**
 
 参数|类型|说明
 -|-|-
@@ -622,7 +622,7 @@ var = "iPhone 8"/"iPhone 7 Plus"
 ```
 
 # getOSType
-## **获取系统类型**
+### **获取系统类型**
 
 参数|类型|说明
 -|-|-
@@ -647,7 +647,7 @@ var = "iOS"
 ```
 
 # isPriviateMode
-## **获取系统环境类型**
+### **获取系统环境类型**
 
 参数|类型|说明
 -|-|-
