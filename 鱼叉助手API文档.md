@@ -5,61 +5,62 @@
 * 反馈问题使用 [码云issues](https://gitee.com/lua_development/yxzhushou/issues) 留言，我们会关注和回复。
 
 **触摸函数**
-* [init](#init&nbsp;初始化屏幕方向) 初始化屏幕方向
-* [touchDown](#touchDown&nbsp;触摸按下) 触摸按下
-* [touchMove](#touchMove&nbsp;移动) 移动
-* [touchUp](#touchUp&nbsp;触摸抬起) 触摸抬起
+* [init](#init) 初始化屏幕方向
+* [touchDown](#touchDown) 触摸按下
+* [touchMove](#touchMove) 移动
+* [touchUp](#touchUp) 触摸抬起
 
 **图像函数**
-* [findColor](#findColor&nbsp;区域多点找色（推荐使用）) 区域多点找色<font color=#ffff00>（推荐使用）</font>
-* [findColors](#findColors&nbsp;高级区域多点找色（推荐使用）) 高级区域多点找色<font color=#ffff00>（推荐使用）</font>
-* [getColor](#getColor&nbsp;获取屏幕某点颜色值) 获取屏幕某点颜色值
-* [getColorRGB](#getColorRGB&nbsp;获取屏幕某点颜色R,G,B值) 获取屏幕某点颜色R,G,B值
-* ~~[findImageInRegionFuzzy](#findImageInRegionFuzzy&nbsp;模糊区域找图) 模糊区域找图~~
-* ~~[snapshot](#snapshot&nbsp;截图) 截图~~
-* [keepScreen](#keepScreen&nbsp;保持屏幕) 保持屏幕
-* [binarizeImage](#binarizeImage&nbsp;二值化图片转换为table) 二值化图片转换为table
+* [findColor](#findColor) 区域多点找色<font color=#ffff00>（推荐使用）</font>
+* [findColors](#findColors) 高级区域多点找色<font color=#ffff00>（推荐使用）</font>
+* [getColor](#getColorRGB) 获取屏幕某点颜色值
+* [getColorRGB](#getColorRGB) 获取屏幕某点颜色R,G,B值
+* ~~[findImageInRegionFuzzy](#findImageInRegionFuzzy) 模糊区域找图~~
+* ~~[snapshot](#snapshot) 截图~~
+* [keepScreen](#keepScreen) 保持屏幕
+* [binarizeImage](#binarizeImage) 二值化图片转换为table
 
 **功能函数**
-* ~~[http](#http&nbsp;Http网络请求) Http网络请求~~
-* ~~[base64encode](#base64encode&nbsp;base64编码) base64编码~~
-* ~~[base64decode](#base64decode&nbsp;base64解码) base64解码~~
+* ~~[http](#http) HTTPget/HTTPpost 网络请求~~
+* ~~[base64encode](#base64encode) base64编码~~
+* ~~[base64decode](#base64decode) base64解码~~
 
 **其他函数**
-* [mSleep](#mSleep&nbsp;延时) 延时
-* [sysLog](#sysLog&nbsp;系统日志) 系统日志
-* [lua_exit](#lua_exit&nbsp;退出脚本执行) 退出脚本执行
+* [mSleep](#mSleep) 延时
+* [sysLog](#sysLog) 系统日志
+* [lua_exit](#lua_exit) 退出脚本执行
 
 **界面函数**
-* ~~[showUI](#showUI&nbsp;显示自定义脚本界面) 显示自定义脚本界面~~
-* ~~[getUIContent](#getUIContent&nbsp;获取UI文件信息) 获取UI文件信息~~
-* ~~[resetUIConfig](#resetUIConfig&nbsp;重置UI默认选项) 重置UI默认选项~~
+* ~~[showUI](#showUI) 显示自定义脚本界面~~
+* ~~[getUIContent](#getUIContent) 获取UI文件信息~~
+* ~~[resetUIConfig](#resetUIConfig) 重置UI默认选项~~
 
 **设备函数**
-* [getScreenSize](#getScreenSize&nbsp;获取屏幕竖屏分辨率) 获取屏幕竖屏分辨率
-* [getScreenDirection](#getScreenDirection&nbsp;获取屏幕方向) 获取屏幕方向
-* ~~[setScreenScale](#setScreenScale&nbsp;设置屏幕等比例自动缩放) 设置屏幕等比例自动缩放~~
-* ~~[setScreenAllScale](#setScreenAllScale&nbsp;设置屏幕全分辨率自动缩放) 设置屏幕全分辨率自动缩放~~
-* [mTime](#mTime&nbsp;获取本地时间戳（毫秒）) 获取本地时间戳（毫秒）
-* ~~[getNetTime](#getNetTime&nbsp;获取网络时间) 获取网络时间~~
-* [getOSType](#getOSType&nbsp;获取系统类型) 获取系统类型
-* [isPriviateMode](#isPriviateMode&nbsp;获取系统环境类型) 获取系统环境类型
-* [getMobilephoneType](#getMobilephoneType&nbsp;获取系统型号) 获取系统型号
-* ~~[getLocalInfo](#getLocalInfo&nbsp;获取系统语言属性) 获取系统语言属性~~
+* [getScreenSize](#getScreenSize) 获取屏幕竖屏分辨率
+* [getScreenDirection](#getScreenDirection) 获取屏幕方向
+* ~~[setScreenScale](#setScreenScale) 设置屏幕等比例自动缩放~~
+* ~~[setScreenAllScale](#setScreenAllScale) 设置屏幕全分辨率自动缩放~~
+* [mTime](#mTime) 获取本地时间戳（毫秒）
+* ~~[getNetTime](#getNetTime) 获取网络时间~~
+* [getOSType](#getOSType) 获取系统类型
+* [isPriviateMode](#isPriviateMode) 获取系统环境类型
+* [getMobilephoneType](#getMobilephoneType) 获取系统型号
+* ~~[getLocalInfo](#getLocalInfo) 获取系统语言属性~~
 
 **安卓函数**
 
 仅支持Android使用
 
-* ~~[toast](#toast&nbsp;提示) 提示~~
-* [createHUD](#createHUD&nbsp;创建HUD内容) 创建HUD内容
-* [showHUD](#showHUD&nbsp;显示HUD内容) 显示HUD内容
-* [hideHUD](#hideHUD&nbsp;隐藏HUD内容) 隐藏HUD内容
-* ~~[dialog](#dialog&nbsp;提示框) 提示框~~
-* ~~[dialogRet](#dialogRet&nbsp;带按钮的对话框) 带按钮的对话框~~
-* ~~[dialogInput](#dialogInput&nbsp;带参数的对话框) 带参数的对话框~~
+* ~~[toast](#toast) 提示~~
+* [createHUD](#createHUD) 创建HUD内容
+* [showHUD](#showHUD) 显示HUD内容
+* [hideHUD](#hideHUD) 隐藏HUD内容
+* ~~[dialog](#dialog) 提示框~~
+* ~~[dialogRet](#dialogRet) 带按钮的对话框~~
+* ~~[dialogInput](#dialogInput) 带参数的对话框~~
 
-# init&nbsp;初始化屏幕方向
+# init
+## **初始化屏幕方向**
 
 参数|类型|说明
 -|-|-
@@ -87,16 +88,17 @@ init("0", 0);
 --开发方向为横屏 home 在右
 init("0", 1);
 ```
-受 [init](#init&nbsp;初始化屏幕方向) 函数影响的函数：
-+ [touchDown](#touchDown&nbsp;触摸按下) 触摸按下
-+ [touchMove](#touchMove&nbsp;移动) 触摸移动
-+ [touchUp](#touchUp&nbsp;触摸抬起) 触摸抬起
-+ [findColor](#findColor&nbsp;区域多点找色（推荐使用）) 区域多点找色
-+ [findColors](#findColors&nbsp;高级区域多点找色（推荐使用）) 区域多点找色
-+ [getColor](#getColor&nbsp;获取屏幕某点颜色值) 获取屏幕某点颜色值
-+ [getColorRGB](#getColorRGB&nbsp;获取屏幕某点颜色R,G,B值) 获取屏幕某点颜色R,G,B值
+受 [init](#init) 函数影响的函数：
++ [touchDown](#touchDown) 触摸按下
++ [touchMove](#touchMove) 触摸移动
++ [touchUp](#touchUp) 触摸抬起
++ [findColor](#findColor) 区域多点找色
++ [findColors](#findColors) 区域多点找色
++ [getColor](#getColor) 获取屏幕某点颜色值
++ [getColorRGB](#getColorRGB) 获取屏幕某点颜色R,G,B值
 
-# touchDown&nbsp;触摸按下
+# touchDown 
+## **触摸按下**
 
 参数|类型|说明
 -|-|-
@@ -121,7 +123,8 @@ mSleep(50)
 touchUp(1, 100, 100)
 ```
 
-# touchMove&nbsp;移动
+# touchMove 
+## **移动**
 
 参数|类型|说明
 -|-|-
@@ -148,7 +151,8 @@ mSleep(100)
 touchUp(1, 200, 200)
 ```
 
-# touchUp&nbsp;触摸抬起
+# touchUp 
+## **触摸抬起**
 
 参数|类型|说明
 -|-|-
@@ -171,7 +175,8 @@ mSleep(50)
 touchUp(1, 100, 100)
 ```
 
-# findColor&nbsp;区域多点找色（推荐使用）
+# findColor
+## **区域多点找色<font color=#ffff00>（推荐使用）</font>**
 
 参数|类型|说明
 -|-|-
@@ -300,14 +305,15 @@ local x, y = findColor(
 --关闭保持屏幕
 keepScreen(false);
 ```
-提高 [findColor](#findColor&nbsp;区域多点找色（推荐使用）) 函数找色效率：
+提高 [findColor](#findColor) 函数找色效率：
 + [keepScreen]() 保持屏幕
 
-# findColors&nbsp;高级区域多点找色（推荐使用）
+# findColors
+**<font size='5'>高级区域多点找色</font><font color=#ffff00>（推荐使用）</font>**
 
 **说明：**
 
-[findColor](#findColor&nbsp;区域多点找色（推荐使用）) 扩展函数
+[findColor](#findColor) 扩展函数
 
 返回值|类型|说明
 -|-|-
@@ -326,10 +332,11 @@ local point = {
 local point = {}
 ```
 
-提高 [findColors](#findColors&nbsp;高级区域多点找色（推荐使用）) 函数找色效率：
+提高 [findColors](#findColors) 函数找色效率：
 + [keepScreen]() 保持屏幕
 
-# getColor&nbsp;获取屏幕某点颜色值
+# getColor
+## **获取屏幕某点颜色值**
 
 参数|类型|说明
 -|-|-
@@ -354,9 +361,10 @@ if getColor(100, 100) == 0xffffff then
 end
 ```
 **注意事项：**
-* [getColor](#getColor&nbsp;获取屏幕某点颜色值) 函数获得的颜色值十六进制文本中，实际顺序为RGB
+* [getColor](#getColor) 函数获得的颜色值十六进制文本中，实际顺序为RGB
 
-# getColorRGB&nbsp;获取屏幕某点颜色R,G,B值
+# getColorRGB
+## **获取屏幕某点颜色R,G,B值**
 
 参数|类型|说明
 -|-|-
@@ -431,9 +439,10 @@ keepScreen(false);--关
 ```
 
 **注意事项：**
-* [getColorRGB](#getColorRGB&nbsp;获取屏幕某点颜色R,G,B值) 函数获得的颜色值十六进制文本中，实际顺序为RGB
+* [getColorRGB](#getColorRGB) 函数获得的颜色值十六进制文本中，实际顺序为RGB
 
-# keepScreen&nbsp;保持屏幕
+# keepScreen
+## **保持屏幕**
 
 参数|类型|说明
 -|-|-
@@ -461,13 +470,14 @@ for y = 1, 640, 10 do
 end
 keepScreen(false); --恢复截图
 ```
-受 [keepScreen](#keepScreen&nbsp;保持屏幕) 影响函数：
-+ [findColor](#findColor&nbsp;区域多点找色（推荐使用）) 区域多点找色
-+ [findColors](#findColors&nbsp;高级区域多点找色（推荐使用）) 高级区域多点找色
-+ [getColor](#getColor&nbsp;获取屏幕某点颜色值) 获取屏幕某点颜色值
-+ [getColorRGB](#getColorRGB&nbsp;获取屏幕某点颜色R,G,B值) 获取屏幕某点颜色R,G,B值
+受 [keepScreen](#keepScreen) 影响函数：
++ [findColor](#findColor) 区域多点找色
++ [findColors](#findColors) 高级区域多点找色
++ [getColor](#getColor) 获取屏幕某点颜色值
++ [getColorRGB](#getColorRGB) 获取屏幕某点颜色R,G,B值
 
-# binarizeImage&nbsp;二值化图片转换为table
+# binarizeImage
+## **二值化图片转换为table**
 
 参数|类型|说明
 -|-|-
@@ -523,7 +533,8 @@ colorTbl格式类似这样：
 ]]
 ```
 
-# mSleep&nbsp;延时
+# mSleep
+## **延时**
 
 参数|类型|说明
 -|-|-
@@ -555,7 +566,8 @@ touchUp(1, 200, 300);   --抬起
 * 请勿将此函数用于长时间的精确计时。
 * 1 秒 (s) = 1000 毫秒 (ms)。
 
-# sysLog&nbsp;系统日志
+# sysLog
+## **系统日志**
 
 参数|类型|说明
 -|-|-
@@ -574,7 +586,8 @@ sysLog(contents)
 + 该函数将日志输出到对应平台的开发窗口
 + 该函数可通过 [setSysConfig](#setSysConfig) 设置项"isFileLog"设置为写入日志到文件，详情查看“[setSysConfig](#setSysConfig) 设置系统参数”条目
 
-# lua_exit&nbsp;退出脚本执行
+# lua_exit
+## **退出脚本执行**
 
 **脚本示例：**
 ```lua
@@ -583,7 +596,8 @@ lua_exit() --结束
 print("2") --无法到达
 ```
 
-# getMobilephoneType&nbsp;获取手机型号
+# getMobilephoneType
+## **获取手机型号**
 
 参数|类型|说明
 -|-|-
@@ -607,7 +621,8 @@ var = "xiaomi 8"
 var = "iPhone 8"/"iPhone 7 Plus"
 ```
 
-# getOSType&nbsp;获取系统类型
+# getOSType
+## **获取系统类型**
 
 参数|类型|说明
 -|-|-
@@ -631,7 +646,8 @@ var = "android"
 var = "iOS"
 ```
 
-# isPriviateMode&nbsp;获取系统环境类型
+# isPriviateMode
+## **获取系统环境类型**
 
 参数|类型|说明
 -|-|-
