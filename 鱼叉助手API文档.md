@@ -206,7 +206,7 @@ x1,y1|<font color=#00FFFF>number</font>|`[必填]` 偏移位置的坐标值
 color1|<font color=#00FFFF>number</font>|`[必填]` 偏移位置需要匹配颜色的十六进制颜色值
 degree1|<font color=#00FFFF>number</font>|\[选填\] 偏移位置找色相似度，范围：1 ~ 100，当是100时为完全匹配
 offset1|<font color=#00FFFF>number</font>|\[选填\] 偏移位置找色偏色值，十六进制颜色值，当是0x000000时为完全匹配，当大于0时degree1自动设置为100
-degree|<font color=#00FFFF>number</font>|`[必填]` 全局找色相似度，范围：1 ~ 100，当是100时为完全匹配
+degree|<font color=#00FFFF>number</font>|\[选填\] 全局找色相似度，范围：1 ~ 100，当是100时为完全匹配,默认为95
 hdir|<font color=#00FFFF>number</font>|\[选填\] 水平搜索方向，0表示从左到右，1表示从右到左，默认为0
 vdir|<font color=#00FFFF>number</font>|\[选填\] 垂直搜索方向，0表示从上到下，1表示从下到上，默认为0
 priority|<font color=#00FFFF>number</font>|\[选填\] 搜索优先级，0表示水平优先，1表示垂直优先，默认为0
@@ -353,7 +353,7 @@ local x, y = findColor(
 
 返回值|类型|说明
 -|-|-
-point|<font color=#FFFF00>table</font>|`[成功]` 返回所有符合条件的参照点的坐标，最多99个 `[失败]` 返回空表 { }
+point|<font color=#FFFF00>table</font>|`[成功]` 返回所有符合条件的参照点的坐标，最多99个，`[失败]` 返回空表 { }
 
 **脚本示例：**
 
